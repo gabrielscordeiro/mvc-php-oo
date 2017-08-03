@@ -1,1 +1,1 @@
-Projeto de um mini framework desenvolvido em PHP OO usando a estrutura MVC 
+Projeto de um mini framework desenvolvido em PHP, Vue.js e Sass usando a estrutura MVC 
