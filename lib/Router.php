@@ -5,7 +5,7 @@ namespace lib;
 /**
  * Description of Router
  *
- * @author Gabriel
+ * @author Gabriel Schmidt Cordeiro <gabrielscordeiro2012@gmail.com.br>
  */
 class Router {
 
@@ -13,6 +13,8 @@ class Router {
         'site' => 'site',
         'admin' => 'admin'
     );
+    
+    private $urlBase = APP_ROOT;
     protected $routerOnRaiz = 'site';
     protected $onRaiz = true;
 

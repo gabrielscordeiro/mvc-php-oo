@@ -5,8 +5,8 @@ namespace lib;
 /**
  * Description of Model
  *
- * @author Gabriel
+ * @author Gabriel Schmidt Cordeiro <gabrielscordeiro2012@gmail.com.br>
  */
 class Model {
-    //put your code here
+    
 }

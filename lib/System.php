@@ -5,7 +5,7 @@ namespace lib;
 /**
  * Description of System
  *
- * @author Gabriel
+ * @author Gabriel Schmidt Cordeiro <gabrielscordeiro2012@gmail.com.br>
  */
 class System extends Router {
 
@@ -100,13 +100,19 @@ class System extends Router {
 
     private function validarController() {
         if (!(class_exists($this->runController))) {
-            die('Controller ' . $this->runController . ' não existe');
+            header("HTTP/1.0 404 Not Found");
+            define('ERROR', 'Não foi localizado o Controller: ' . $this->controller);
+            include("content/{$this->area}/shared/404_error.phtml");
+            exit();
         }
     }
 
     private function validarAction() {
         if (!(method_exists($this->runController, $this->action))) {
-            die('Aciton ' . $this->action . 'não existe');
+             header("HTTP/1.0 404 Not Found");
+            define('ERROR', 'Não foi localizado o Action: ' . $this->action);
+            include("content/{$this->area}/shared/404_error.phtml");
+            exit();
         }
     }
 
