@@ -1,5 +1,16 @@
 <?php
-require_once('core/init.php');
+
+define('APP_ROOT', 'mvc-php-oo');
+require_once 'helper/Bootstrap.php';
+
+use lib\System;
+
+$System = new System;
+$System->Run();
+
+
+//Comentei abaixo só para poder fazer o teste do funcionamento do framework
+//require_once('core/init.php');
 
 //echo Config::get('pgsql/host');
 
@@ -13,7 +24,7 @@ else {
    echo $user->first()->nome;
 }
 */
-
+/*
 $user = Database::getInstance()->insert('usuario', array(
    "senha" => "novasenha",
    "nome" => "Guria Cachorra",
@@ -26,3 +37,4 @@ $user = Database::getInstance()->update('usuario', 3, array(
    "senha" => "novasenha",
    "nome" => "Guria Cachorra"
 ));
+*/
