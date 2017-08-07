@@ -1,18 +1,23 @@
 <?php
-
-namespace lib;
-
-/**
- * Description of Config
- *
- * @author Gabriel Schmidt Cordeiro <gabrielscordeiro2012@gmail.com.br>
- */
 class Config {
 
-    const srvMyhost = 'localhost';
-    const srvMyuser = 'root';
-    const srvMypass = '';
-    const srvMydbname = 'mdd_consultoria';
-    const charset = 'utf8';
+    public static function get($caminho = null){
+      if($caminho){
+         $config = $GLOBALS['config'];
+         $caminho = explode('/', $caminho);
+
+         foreach ($caminho as $pedaco) {
+            if(isset($config[$pedaco])){
+               $config = $config[$pedaco];
+            }
+         }
+
+         return $config;
+      }
+
+      return false;
+   }
+
+
 
 }
