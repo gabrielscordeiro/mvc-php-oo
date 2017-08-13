@@ -1,4 +1,6 @@
 <?php
+namespace lib;
+
 class Config {
 
     public static function get($caminho = null){
@@ -17,7 +19,4 @@ class Config {
 
       return false;
    }
-
-
-
 }

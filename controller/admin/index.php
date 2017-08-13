@@ -1,3 +1,0 @@
-<?php
-//Será implementado ainda
-
