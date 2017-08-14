@@ -117,7 +117,7 @@ class System extends Router {
     }
 
     public function Run() {
-        $this->runController = 'controller\\' . $this->area . '\\' . $this->controller . 'Controller';
+        $this->runController = 'controller\\' . $this->getArea() . '\\' . $this->getController() . 'Controller';
         $this->validarController();
         $this->validarAction();
         $app = new $this->runController();
