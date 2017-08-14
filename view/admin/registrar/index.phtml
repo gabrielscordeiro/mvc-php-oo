@@ -1,0 +1,26 @@
+<?php
+    use lib\Input;
+    use lib\Token;
+?>
+<form action="" method="post">
+    <div>
+        <label for="usuario">Usuário:</label>
+        <input type="text" name="usuario" id="usuario" value="<?=escape(Input::get('usuario'));?>" autocomplete="off">
+    </div>
+    <div>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha" value="" autocomplete="off">
+    </div>
+    <div>
+        <label for="senha">Digite sua senha novamente:</label>
+        <input type="password" name="senha2" id="senha2" value="" autocomplete="off">
+    </div>
+    <div>
+        <label for="senha">Nome:</label>
+        <input type="text" name="nome" id="nome" value="<?=escape(Input::get('nome'));?>" autocomplete="off">
+    </div>
+
+    <input type="hidden" name="token" value="<?=Token::generate()?>">
+
+    <input type="submit" value="Registrar">
+</form>
