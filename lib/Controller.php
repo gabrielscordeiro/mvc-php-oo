@@ -10,7 +10,7 @@ namespace lib;
 class Controller extends System {
 
     public $dados;
-    public $layout;
+    public $layout = '_layout';
     private $path;
     private $pathRender;
 
@@ -55,7 +55,7 @@ class Controller extends System {
         $this->keywords = is_null($this->keywords) ? 'Minha palavra chave' : $this->keywords;
 
         $this->setPath($render);
-        
+
         if (is_null($this->layout)) {
             $this->render();
         } else {

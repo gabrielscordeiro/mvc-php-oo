@@ -121,7 +121,8 @@ class System extends Router {
         $this->validarController();
         $this->validarAction();
         $app = new $this->runController();
-        $app->index();
+        $action = $this->action;
+        $app->$action();
     }
 
 }
