@@ -39,3 +39,6 @@ CREATE TABLE public.usuario_sessao
   hash character varying(50),
   CONSTRAINT codigo_usuario_sessao PRIMARY KEY (codigo)
 );
+
+ALTER TABLE public.usuario_sessao
+   ALTER COLUMN hash TYPE character varying(150);

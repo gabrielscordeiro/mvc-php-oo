@@ -1,0 +1,34 @@
+<?php
+use lib\Token;
+use lib\Session;
+use lib\Config;
+
+if(Session::exists('login')){
+    echo Session::flash('login');
+}
+?>
+
+<h1>Login</h1>
+
+<form action="" method="post">
+    <div>
+        <label for="usuario">Usuário</label>
+        <input type="text" name="usuario" id="usuario" autocomplete="off">
+    </div>
+    <div>
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" id="senha" autocomplete="off">
+    </div>
+    <div>
+        <label for="remember">
+            <input type="checkbox" name="remember" id="remember" autocomplete="off">
+            Lembrar de mim
+        </label>
+
+    </div>
+
+    <input type="hidden" name="token" value="<?=Token::generate();?>">
+    <input type="submit" value="Log in">
+</form>
+
+<a href="registrar">Não possui uma conta ainda?</a>

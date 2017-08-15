@@ -1,6 +1,16 @@
 <?php
 use lib\Session;
-echo Session::flash('sucesso');
+use lib\Usuario;
+use lib\Redirecionar;
+
+if(Session::exists('home')){
+    echo Session::flash('home');
+}
+
+$usuario = new Usuario();
+if($usuario->isLogado()){
+    echo '<a href="./logout">Sair</a>';
+}
 ?>
 
 <h1>adminnn</h1>

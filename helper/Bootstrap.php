@@ -8,7 +8,7 @@ $GLOBALS['config'] = array(
       'senha' => 'carrodemola',
       'database' => 'postgres'
    ),
-   'remeber' => array(
+   'remember' => array(
       'cookie_name' => 'hash',
       'cookie_expiry' => 604800
    ),
