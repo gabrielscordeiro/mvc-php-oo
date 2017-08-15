@@ -28,6 +28,7 @@ class Database{
    }
 
    public function query($sql, $params = array()){
+
       $this->_error = false;
       $this->_query = $this->_pdo->prepare($sql);
       if($this->_query){ //se conseguiu preparar o sql
