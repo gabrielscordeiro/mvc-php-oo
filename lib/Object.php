@@ -9,7 +9,7 @@ namespace lib;
  */
 class Object {
 
-    public function __construct($method = null, $all = true) {
+    public function __construct($method = 'POST', $all = true) {
         if ($method == 'POST') {
             foreach ($_POST as $ind => $val){
                 $this->$ind = $val;
