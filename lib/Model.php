@@ -138,7 +138,7 @@ class Model extends Config {
             if (count($values) > 0) {
                 foreach ($values as $key => $value) {
                     if (property_exists($obj, $key) || $exists) {
-                        $obj->key = $values->key;
+                        $obj->$key = $values->$key;
                     }
                 }
             }

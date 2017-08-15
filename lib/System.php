@@ -102,7 +102,7 @@ class System extends Router {
         if (!(class_exists($this->runController))) {
             header("HTTP/1.0 404 Not Found");
             define('ERROR', 'Não foi localizado o Controller: ' . $this->controller);
-            include("content/{$this->area}/shared/404_error.phtml");
+            include("content/404_error.phtml");
             exit();
         }
     }
@@ -111,7 +111,7 @@ class System extends Router {
         if (!(method_exists($this->runController, $this->action))) {
              header("HTTP/1.0 404 Not Found");
             define('ERROR', 'Não foi localizado o Action: ' . $this->action);
-            include("content/{$this->area}/shared/404_error.phtml");
+            include("content/404_error.phtml");
             exit();
         }
     }
