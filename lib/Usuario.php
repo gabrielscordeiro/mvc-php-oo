@@ -62,30 +62,11 @@ class Usuario{
         return false;
     }
 
-    public function login($usuario = null, $senha = null, $remember = false){
+    public function login($usuario = null, $senha = null){
         $user = $this->find($usuario);
         if($user){
             if($this->dado()->senha === Hash::make($senha, $this->dado()->salt)){
                 Session::put($this->_sessionName, $this->dado()->codigo);
-
-                if($remember){
-                    $hash = Hash::unique();
-                    $hashCheck = $this->_db->get('usuario_sessao', array('codigo_usuario', '=', $this->dado()->codigo));
-
-                    if(!$hashCheck->count()){
-                        $this->_db->insert('usuario_sessao', array(
-                            'codigo_usuario' => $this->dado()->codigo,
-                            'hash' => $hash
-                        ));
-                    }
-                    else {
-                        $hash = $hashCheck->first()->hash;
-                    }
-
-                    Cookie::put($this->_cookieName, $hash, Config::get('remember/cookie_expiry'));
-                    
-                }
-
                 return true;
             }
         }
