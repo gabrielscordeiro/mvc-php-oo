@@ -9,7 +9,13 @@ if(Session::exists('login')){
 ?>
 
 <h1>Login</h1>
-
+<?
+/*
+    $campo = Input->campo(TIPO::TEXT, $nome, $label);
+    $campo->addParams(array('required' => true, 'class' => 'campo bootstrap', 'v:on' => 'funcao'));
+    $campo->validar(array('cpfCnpj'));
+    */
+?>
 <form action="" method="post">
     <div>
         <label for="usuario">Usuário</label>

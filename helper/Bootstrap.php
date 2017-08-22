@@ -5,7 +5,7 @@ $GLOBALS['config'] = array(
    'pgsql' => array(
       'host' => '127.0.0.1',
       'usuario' => 'postgres',
-      'senha' => 'carrodemola',
+      'senha' => 'root',
       'database' => 'postgres'
    ),
    'remember' => array(
