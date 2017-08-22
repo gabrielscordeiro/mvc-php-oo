@@ -9,13 +9,7 @@ if(Session::exists('login')){
 ?>
 
 <h1>Login</h1>
-<?
-/*
-    $campo = Input->campo(TIPO::TEXT, $nome, $label);
-    $campo->addParams(array('required' => true, 'class' => 'campo bootstrap', 'v:on' => 'funcao'));
-    $campo->validar(array('cpfCnpj'));
-    */
-?>
+
 <form action="" method="post">
     <div>
         <label for="usuario">Usuário</label>
@@ -24,13 +18,6 @@ if(Session::exists('login')){
     <div>
         <label for="senha">Senha</label>
         <input type="password" name="senha" id="senha" autocomplete="off">
-    </div>
-    <div>
-        <label for="remember">
-            <input type="checkbox" name="remember" id="remember" autocomplete="off">
-            Lembrar de mim
-        </label>
-
     </div>
 
     <input type="hidden" name="token" value="<?=Token::generate();?>">
