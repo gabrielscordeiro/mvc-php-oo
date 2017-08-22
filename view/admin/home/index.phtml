@@ -11,6 +11,9 @@ $usuario = new Usuario();
 if($usuario->isLogado()){
     echo '<a href="./logout">Sair</a>';
 }
+else {
+   Redirecionar::para('login');
+}
 ?>
 
 <h1>adminnn</h1>

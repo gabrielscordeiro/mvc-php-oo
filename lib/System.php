@@ -30,6 +30,10 @@ class System extends Router {
         $this->url = isset($_GET['url']) ? $_GET['url'] : 'home/index';
     }
 
+    public function getUrl(){
+      return $this->url;
+   }
+
     private function setExploder() {
         $this->exploder = explode('/', $this->url);
     }
